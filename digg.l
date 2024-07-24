@@ -1,0 +1,15 @@
+%{
+#include<stdio.h>
+%}
+DIGIT [0-9]
+%%
+{DIGIT}+ printf("The input is a digit\n");
+. printf("The input is not a digit\n");
+%%
+int main() {
+    yylex();
+    return 0;
+}
+int yywrap()
+{
+}
